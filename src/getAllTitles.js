@@ -1,17 +1,8 @@
 const movies = require("../data/movies");
 
-const getAllTitles = (movie) => {
-   const arrayTitulos = []
-  for (let i = 0; i < movie.length; i++) {
-    
-    arrayTitulos.push(movie[i].titulo)
-        
-  }
-  
-  return arrayTitulos
-}
+const getAllTitles = (movie) => movie.map(m => m.titulo);
 
-getAllTitles(movies)
+
 module.exports = {
   getAllTitles
 }
